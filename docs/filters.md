@@ -17,9 +17,9 @@ As a general rule of thumb: If everything disappears, there's something wrong wi
 
 ## Steps
 
-- You can find the advanced mute engine in `src/features/advancedMuteEngine.ts`
-- There's an object `BTD.Filters` inside, which contains all custom filters
-- Add a new key/value to this object to add more custom filters
+- You can find the advanced mute engine in `src/features/advancedMuteEngine.ts`.
+- There's an object `BTD.Filters` inside, which contains all custom filters.
+- Add a new key/value to this object to add more custom filters.
   - You can use the following template for a new custom filter:
     ```js
     BTD_filter_key: {
@@ -39,15 +39,15 @@ As a general rule of thumb: If everything disappears, there's something wrong wi
     }
     ```
   - **Important:** The key needs to start with `BTD`; otherwise, this filter won't be evaluated
-  - `display` controls where the filter will be visible to the user
-    - `global` will display filters in the 'Mute' settings menu list
-    - `actions` will display filters in the action dropdown on tweets and profiles
-  - `options` contains additional options for filters
-    - `templateString` allows to change the filter value used in `display.actions` filters (default: `{{screenName}}`)
-  - `name` is the name of the filter displayed in the Mute settings dropdown
-  - `descriptor` is shown before the filter value in the active mute list (e.g. "keyword 'what I mute'")
-  - `placeholder` is the placeholder shown in the 'Matching' input in the Mute settings menu
-  - `function` is the evaluation function of the custom filter; it has two parameters
-    - `t` is a reference to the Filter executing this evaluation
-    - `e` is a reference to the filter target (usually a `TwitterStatus`)
-    - The function needs to return a boolean value
+  - `display` controls where the filter will be visible to the user.
+    - `global` will display filters in the 'Mute' settings menu list.
+    - `actions` will display filters in the action dropdown on tweets and profiles.
+  - `options` contains additional options for filters.
+    - `templateString` allows to change the filter value used in `display.actions` filters (default: `{{screenName}}`).
+  - `name` is the name of the filter displayed in the Mute settings dropdown.
+  - `descriptor` is shown before the filter value in the active mute list (e.g. "keyword 'what I mute'").
+  - `placeholder` is the placeholder shown in the 'Matching' input in the Mute settings menu.
+  - `function` is the evaluation function of the custom filter; it has two parameters.
+    - `t` is a reference to the Filter executing this evaluation.
+    - `e` is a reference to the filter target (usually a `TwitterStatus`).
+    - The function needs to return a boolean value.
